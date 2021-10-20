@@ -1,6 +1,9 @@
-const Key = ({ number }) => {
+const Key = ({ number }, actionOnClick, isEnabled) => {
   <li>
-    <button class={typeof number === "number" ? "key" : "big key"}>
+    <button
+      className={`{typeof number === "number" ? "key" : "big key"} ${isEnabled}`}
+      onClick={actionOnClick}
+    >
       {number}
     </button>
   </li>;
