@@ -1,10 +1,16 @@
-const Key = ({ number }, actionOnClick, isEnabled) => {
-  <li>
-    <button
-      className={`{typeof number === "number" ? "key" : "big key"} ${isEnabled}`}
-      onClick={actionOnClick}
-    >
-      {number}
-    </button>
-  </li>;
+const Key = ({ number }, actionOnClick) => {
+  return (
+    <>
+      <li key={`key ${number}`}>
+        <button
+          className={typeof number === "number" ? "key" : "big key"}
+          onClick={actionOnClick}
+        >
+          {number}
+        </button>
+      </li>
+    </>
+  );
 };
+
+export default Key;

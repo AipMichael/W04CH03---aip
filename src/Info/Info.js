@@ -1,4 +1,6 @@
-const Info = ({ message }, callClass) => {
+const Info = ({ message }) => {
   //se oculta con la clase off
-  <span className={callClass}>{message}</span>;
+  return <span className="message">{message}</span>;
 };
+
+export default Info;
