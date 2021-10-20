@@ -15,7 +15,7 @@ const Actions = () => {
   ];
   return (
     <>
-      <div class="actions">
+      <div className="actions">
         <Display dialedNumber={123456789} />
         {actionsNeeded.map(({ className, text }) => (
           <Action className={className} text={text} />

@@ -13,22 +13,20 @@ function App() {
 
   return (
     <>
-      <body>
-        <div class="container">
-          <h1 className="main-title">My phone App</h1>
-          <Info message={"...calling"} />
-          <main class="phone">
-            <div class="keyboard-container">
-              <Keyboard
-                myKeys={myKeys}
-                actionOnClick={actionOnClick}
-                isActive={true}
-              />
-            </div>
-            <Actions />
-          </main>
-        </div>
-      </body>
+      <div className="container">
+        <h1 className="main-title">My phone App</h1>
+        <Info message={"...calling"} />
+        <main className="phone">
+          <div className="keyboard-container">
+            <Keyboard
+              myKeys={myKeys}
+              actionOnClick={actionOnClick}
+              isActive={true}
+            />
+          </div>
+          <Actions />
+        </main>
+      </div>
     </>
   );
 }
