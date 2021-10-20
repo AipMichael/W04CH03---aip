@@ -9,7 +9,7 @@ button {
 }
 body {
   margin: 0;
-  background-color: #242424;
+  background-color: #840b55;
   color: #d2d2d2;
 }
 ul,
@@ -20,6 +20,12 @@ ol {
 li {
   list-style: none;
 }
+
+.main-title {
+  margin: 5vh auto;
+  text-align: center;
+}
+
 .container {
   height: 100vh;
   display: flex;

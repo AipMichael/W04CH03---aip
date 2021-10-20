@@ -15,6 +15,7 @@ function App() {
     <>
       <body>
         <div class="container">
+          <h1 className="main-title">My phone App</h1>
           <Info message={"...calling"} />
           <main class="phone">
             <div class="keyboard-container">
