@@ -33,6 +33,7 @@ function App() {
   };
 
   const hangUp = (event) => {
+    event.preventDefault();
     setIsDisabled(true);
     setIsCalling(false);
     setDialedNumber([]);
