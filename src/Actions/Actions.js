@@ -1,7 +1,7 @@
 import Action from "./Action/Action";
 import Display from "./Display/Display";
 
-const Actions = () => {
+const Actions = ({ dialedNumber }) => {
   const actionsNeeded = [
     //considerar si esta array debería estar en App*
     {
@@ -16,7 +16,7 @@ const Actions = () => {
   return (
     <>
       <div className="actions">
-        <Display dialedNumber={123456789} />
+        <Display dialedNumber={dialedNumber} />
         {actionsNeeded.map(({ className, text }) => (
           <Action className={className} text={text} key={text} />
         ))}
