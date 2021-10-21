@@ -4,7 +4,7 @@ import Info from "./Info/Info";
 import Actions from "./Actions/Actions";
 
 function App() {
-  const myKeys = [1, 2, 3, 4, 5, 6, 7, 8, 9, "delete"];
+  const myKeys = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "delete"];
 
   /*   const actionOnClick = () => {
     console.log("hi-ho");
