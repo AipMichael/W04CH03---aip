@@ -27,6 +27,9 @@ function App() {
     event.preventDefault();
     setIsDisabled(false);
     setIsCalling(true);
+    setTimeout(() => {
+      hangUp();
+    }, 5000);
   };
 
   const hangUp = (event) => {
