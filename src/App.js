@@ -8,21 +8,28 @@ import Context from "./components/Context/Context";
 function App() {
   const myKeys = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "delete"];
   const [dialedNumber, setDialedNumber] = useState([]);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const displayDialedNumber = (event) => {
-    setDialedNumber([...dialedNumber, event.target.textContent]);
+    if (dialedNumber.length < 9) {
+      setDialedNumber([...dialedNumber, event.target.textContent]);
+    } else {
+      setIsDisabled(true);
+    }
   };
 
   const deleteNumbers = (event) => {
     setDialedNumber([]);
   };
 
-  /*   const actionOnClick = () => {
-    console.log("hi-ho");
-  }; */
+  const isCalling = (event) => {
+    setIsDisabled(true);
+  };
 
   return (
-    <Context.Provider value={{ displayDialedNumber, deleteNumbers }}>
+    <Context.Provider
+      value={{ displayDialedNumber, deleteNumbers, isDisabled }}
+    >
       <>
         <div className="container">
           <h1 className="main-title">My phone App</h1>
