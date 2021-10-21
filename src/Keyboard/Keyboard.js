@@ -5,7 +5,7 @@ const Keyboard = ({ myKeys }, actionOnClick) => {
     <>
       <ol className="keyboard">
         {myKeys.map((number) => (
-          <Key number={number} actionOnClick={actionOnClick} />
+          <Key number={number} key={number} />
         ))}
       </ol>
     </>
