@@ -38,7 +38,6 @@ function App() {
     setIsCalling(false);
     setDialedNumber([]);
   };
-  /* const isCalling = (event) => {}; */
 
   return (
     <Context.Provider
