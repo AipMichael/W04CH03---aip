@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Context from "../../components/Context/Context";
 
 const Key = ({ number }) => {
-  const { displayDialedNumber, deleteNumbers } = useContext(Context);
+  const { displayDialedNumber, deleteNumbers, isCalling } = useContext(Context);
   return (
     <>
       <li>
@@ -13,6 +13,7 @@ const Key = ({ number }) => {
               ? (event) => deleteNumbers(event)
               : (event) => displayDialedNumber(event)
           }
+          disabled={isCalling}
         >
           {number}
         </button>
