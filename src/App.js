@@ -28,7 +28,9 @@ function App() {
     setIsDisabled(false);
     setIsCalling(true);
     setTimeout(() => {
-      hangUp();
+      setIsDisabled(true);
+      setIsCalling(false);
+      setDialedNumber([]);
     }, 5000);
   };
 
