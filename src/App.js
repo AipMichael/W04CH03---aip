@@ -24,6 +24,7 @@ function App() {
   };
 
   const callActive = (event) => {
+    event.preventDefault();
     setIsDisabled(false);
     setIsCalling(true);
   };
