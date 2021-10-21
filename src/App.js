@@ -9,6 +9,7 @@ function App() {
   const myKeys = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "delete"];
   const [dialedNumber, setDialedNumber] = useState([]);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [isCalling, setIsCalling] = useState(false);
 
   const displayDialedNumber = (event) => {
     if (dialedNumber.length < 9) {
@@ -22,13 +23,28 @@ function App() {
     setDialedNumber([]);
   };
 
-  const isCalling = (event) => {
-    setIsDisabled(true);
+  const callActive = (event) => {
+    setIsDisabled(false);
+    setIsCalling(true);
   };
+
+  const hangUp = (event) => {
+    setIsDisabled(true);
+    setIsCalling(false);
+    setDialedNumber([]);
+  };
+  /* const isCalling = (event) => {}; */
 
   return (
     <Context.Provider
-      value={{ displayDialedNumber, deleteNumbers, isDisabled }}
+      value={{
+        displayDialedNumber,
+        deleteNumbers,
+        isDisabled,
+        isCalling,
+        callActive,
+        hangUp,
+      }}
     >
       <>
         <div className="container">
