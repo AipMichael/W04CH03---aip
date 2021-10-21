@@ -4,7 +4,7 @@ const Key = ({ number }, actionOnClick) => {
       <li>
         <button
           className={typeof number === "number" ? "key" : "big key"}
-          onClick={actionOnClick}
+          onClick={() => actionOnClick()}
         >
           {number}
         </button>

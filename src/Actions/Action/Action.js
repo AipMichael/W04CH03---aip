@@ -1,7 +1,7 @@
 const Action = ({ className, text }) => {
   return (
     <>
-      <a href="#" className={className}>
+      <a href="google.com" className={className}>
         {text}
       </a>
     </>
