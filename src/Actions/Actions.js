@@ -18,7 +18,7 @@ const Actions = () => {
       <div className="actions">
         <Display dialedNumber={123456789} />
         {actionsNeeded.map(({ className, text }) => (
-          <Action className={className} text={text} />
+          <Action className={className} text={text} key={text} />
         ))}
       </div>
     </>
