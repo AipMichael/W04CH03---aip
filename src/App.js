@@ -2,7 +2,7 @@ import "./App.css";
 import Keyboard from "./Keyboard/Keyboard";
 import Info from "./components/Info/Info";
 import Actions from "./Actions/Actions";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Context from "./components/Context/Context";
 
 function App() {
@@ -10,6 +10,8 @@ function App() {
   const [dialedNumber, setDialedNumber] = useState([]);
   const [isDisabled, setIsDisabled] = useState(false);
   const [isCalling, setIsCalling] = useState(false);
+
+  const timer = useRef(null);
 
   const displayDialedNumber = (event) => {
     if (dialedNumber.length < 9) {
@@ -27,7 +29,7 @@ function App() {
     event.preventDefault();
     setIsDisabled(false);
     setIsCalling(true);
-    setTimeout(() => {
+    timer.current = setTimeout(() => {
       setIsDisabled(true);
       setIsCalling(false);
       setDialedNumber([]);
@@ -36,6 +38,7 @@ function App() {
 
   const hangUp = (event) => {
     event.preventDefault();
+    clearTimeout(timer.current);
     setIsDisabled(true);
     setIsCalling(false);
     setDialedNumber([]);
